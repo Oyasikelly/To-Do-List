@@ -1,0 +1,139 @@
+:root {
+  --primary-color: #7784;
+  --dark: #374151;
+  --darker: #1f2937;
+  --darkest: #111827;
+  --gray: #6b7280;
+  --light: #eee;
+  --pink: #ec4899;
+  --purple: #8b5cf6;
+}
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background-color: var(--primary-color);
+  font-family: "fira sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: #1f2937;
+}
+
+header {
+  padding: 2rem 1rem;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+header h1 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: var(--gray);
+  margin-bottom: 1rem;
+}
+#task_form {
+  display: flex;
+}
+input,
+button {
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+}
+#task_input {
+  flex: 11%;
+  background-color: var(--darker);
+  padding: 1rem;
+  color: var(--light);
+  border-radius: 1rem;
+  margin-right: 1rem;
+  font-size: 1.3rem;
+}
+#task_input::placeholder {
+  color: var(--gray);
+}
+#task_submit {
+  color: var(--pink);
+  font-size: 1.3rem;
+  font-weight: 700;
+  background-image: linear-gradient(to right, var(--pink), var(--purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+#task_submit:hover {
+  opacity: 0.8;
+}
+#task_submit:active {
+  opacity: 0.6;
+}
+
+main {
+  padding: 2rem 1rem;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.task_list {
+  padding: 2rem 0;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+.task_list h2 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--gray);
+  margin-bottom: 1rem;
+}
+
+#tasKs .task {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--darkest);
+  padding: 1rem 1rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+#tasKs .task .content {
+  flex: 1 1 0%;
+}
+#tasKs .task .content .text {
+  color: var(--light);
+  font-size: 1.3rem;
+  width: 100%;
+  display: block;
+  transition: 0.4s;
+}
+#tasKs .task .content .text:not(:read-only) {
+  color: var(--pink);
+}
+
+.actions button {
+  color: var(--light);
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+.actions button:hover {
+  opacity: 0.8;
+}
+.actions button:active {
+  opacity: 0.6;
+}
+.task .actions .Edit {
+  background-image: linear-gradient(to right, var(--pink), var(--purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.task .actions .delete {
+  background-image: linear-gradient(to right, red, var(--pink));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
