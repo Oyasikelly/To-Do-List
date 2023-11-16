@@ -142,6 +142,7 @@ main {
   body {
     display: flex;
     flex-direction: column;
+    font-size: small;
   }
   header {
     max-width: 100%;
@@ -153,10 +154,10 @@ main {
     width: auto;
   }
   #task_input {
-    width: 70%;
+    width: 65%;
   }
   #task_submit {
-    width: 20%;
-    font-size: 0.8rem;
+    width: 25%;
+    font-size: 1rem;
   }
 }
